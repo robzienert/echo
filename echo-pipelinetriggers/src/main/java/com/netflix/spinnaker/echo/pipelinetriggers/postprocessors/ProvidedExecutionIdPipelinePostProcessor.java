@@ -35,7 +35,7 @@ public class ProvidedExecutionIdPipelinePostProcessor implements PipelinePostPro
     if (!Strings.isNullOrEmpty(trigger.getExecutionId())) {
       log.debug(
           "Assigning trigger-provided execution ID to pipeline: '{}'", trigger.getExecutionId());
-      return inputPipeline.withExecutionId(trigger.getExecutionId());
+      return inputPipeline.withProvidedExecutionId(trigger.getExecutionId());
     }
     return inputPipeline;
   }

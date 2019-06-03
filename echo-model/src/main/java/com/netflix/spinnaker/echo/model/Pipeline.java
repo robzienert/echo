@@ -45,7 +45,7 @@ public class Pipeline {
 
   @JsonProperty String id;
 
-  @JsonProperty String executionId;
+  @JsonProperty String providedExecutionId;
 
   @JsonProperty String executionEngine;
 

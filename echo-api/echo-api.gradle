@@ -6,6 +6,7 @@
  * dependencies along for the ride -- ideally nothing besides kork-plugins-api.
  */
 apply from: "${project.rootDir}/gradle/kotlin.gradle"
+apply plugin: "org.jetbrains.dokka"
 
 dependencies {
   implementation platform("com.netflix.spinnaker.kork:kork-bom:$korkVersion")
@@ -24,4 +25,12 @@ dependencies {
 
 test {
   useJUnitPlatform()
+}
+
+dokkaHtml {
+  dokkaSourceSets {
+    configureEach {
+      jdkVersion.set(11)
+    }
+  }
 }
